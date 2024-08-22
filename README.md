@@ -9,10 +9,12 @@ La aplicación contiene dos páginas principales accesibles desde la página de 
 
 
 ProtectedPage: Una página protegida que requiere autenticación a través de Keycloak. Si el usuario no está autenticado, será redirigido automáticamente a la página de inicio de sesión de Keycloak.
+
 ![Captura de Pantalla 2024-08-22 a la(s) 3 14 32 p  m](https://github.com/user-attachments/assets/c6ab07de-3e13-4031-9a4e-8a2170e4c7c9)
 
 PublicPage: Una página pública que no requiere autenticación.
 Funcionalidad Principal
+
 ![Captura de Pantalla 2024-08-22 a la(s) 3 15 16 p  m](https://github.com/user-attachments/assets/0f5f0c1d-1bfc-4579-96e3-1c17fe23c360)
 
 
