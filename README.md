@@ -52,6 +52,8 @@ docker run -p 8080:8080 \
   
 Esto iniciará un servidor de Keycloak en http://localhost:8080. Puedes acceder al administrador de Keycloak con el usuario admin y la contraseña admin.
 
+![image](https://github.com/user-attachments/assets/bec23a53-065e-4690-b131-5fc8f169cee5)
+
 
 Configurar el Realm y el Cliente:
 Crea un nuevo "realm" llamado reino-users.
