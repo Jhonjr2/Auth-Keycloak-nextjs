@@ -1,3 +1,85 @@
+## Next.js Keycloak Authentication 
+
+
+Este proyecto es una aplicación simple desarrollada con Next.js que implementa autenticación con Keycloak para proteger ciertas rutas de la aplicación. El proyecto demuestra cómo integrar Keycloak en un proyecto de Next.js utilizando Docker para ejecutar el servidor de Keycloak.
+
+
+Descripción del Proyecto
+La aplicación contiene dos páginas principales accesibles desde la página de inicio:
+
+
+ProtectedPage: Una página protegida que requiere autenticación a través de Keycloak. Si el usuario no está autenticado, será redirigido automáticamente a la página de inicio de sesión de Keycloak.
+
+![Captura de Pantalla 2024-08-22 a la(s) 3 14 32 p  m](https://github.com/user-attachments/assets/c6ab07de-3e13-4031-9a4e-8a2170e4c7c9)
+
+PublicPage: Una página pública que no requiere autenticación.
+Funcionalidad Principal
+
+![Captura de Pantalla 2024-08-22 a la(s) 3 15 16 p  m](https://github.com/user-attachments/assets/0f5f0c1d-1bfc-4579-96e3-1c17fe23c360)
+
+
+Autenticación con Keycloak: Se utiliza la biblioteca keycloak-js para gestionar la autenticación de usuarios. La configuración de Keycloak se realiza mediante un objeto que incluye la URL del servidor, el nombre del "realm" y el ID del cliente.
+
+
+Redireccionamiento Condicional: Dependiendo del estado de autenticación del usuario, la aplicación redirige al usuario a la página protegida o de inicio de sesión.
+
+
+Integración con Next.js: Se utilizan hooks como useEffect y useState para gestionar el estado de la autenticación y el ciclo de vida del componente. Además, se usa useRouter para manejar la navegación en la aplicación.
+
+
+Requisitos
+Para ejecutar esta aplicación, necesitas tener instalado:
+
+
+Node.js (v14 o superior)
+Docker (para ejecutar Keycloak)
+
+
+Configuración de Keycloak con Docker
+Descargar la imagen de Docker de Keycloak:
+bash
+Copiar código
+docker pull quay.io/keycloak/keycloak:latest
+
+Ejecutar el contenedor de Keycloak:
+bash
+Copiar código
+docker run -p 8080:8080 \
+  -e KEYCLOAK_ADMIN=admin \
+  -e KEYCLOAK_ADMIN_PASSWORD=admin \
+  quay.io/keycloak/keycloak:latest \
+  start-dev
+  
+Esto iniciará un servidor de Keycloak en http://localhost:8080. Puedes acceder al administrador de Keycloak con el usuario admin y la contraseña admin.
+
+
+Configurar el Realm y el Cliente:
+Crea un nuevo "realm" llamado reino-users.
+Crea un cliente llamado nextjs-app-client con la URL base http://localhost:3000.
+Configura los flujos de autenticación y asigna roles si es necesario.
+Uso
+Clona este repositorio en tu máquina local.
+
+Instala las dependencias con npm install.
+
+Inicia la aplicación con npm run dev.
+
+Accede a http://localhost:3000 en tu navegador.
+
+Usa el botón ProtectedPage para acceder a la página protegida por Keycloak.
+
+Usa el botón PublicPage para acceder a la página pública.
+
+
+Muchas Gracias por su atención.
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
