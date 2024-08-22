@@ -1,3 +1,28 @@
+Next.js Keycloak Authentication 
+Este proyecto es una aplicación simple desarrollada con Next.js que implementa autenticación con Keycloak para proteger ciertas rutas de la aplicación. El proyecto demuestra cómo integrar Keycloak en un proyecto de Next.js utilizando Docker para ejecutar el servidor de Keycloak.
+
+Descripción del Proyecto
+La aplicación contiene dos páginas principales accesibles desde la página de inicio:
+
+ProtectedPage: Una página protegida que requiere autenticación a través de Keycloak. Si el usuario no está autenticado, será redirigido automáticamente a la página de inicio de sesión de Keycloak.
+PublicPage: Una página pública que no requiere autenticación.
+Funcionalidad Principal
+Autenticación con Keycloak: Se utiliza la biblioteca keycloak-js para gestionar la autenticación de usuarios. La configuración de Keycloak se realiza mediante un objeto que incluye la URL del servidor, el nombre del "realm" y el ID del cliente.
+
+Redireccionamiento Condicional: Dependiendo del estado de autenticación del usuario, la aplicación redirige al usuario a la página protegida o de inicio de sesión.
+
+Integración con Next.js: Se utilizan hooks como useEffect y useState para gestionar el estado de la autenticación y el ciclo de vida del componente. Además, se usa useRouter para manejar la navegación en la aplicación.
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
