@@ -2,6 +2,8 @@
 import Keycloak from 'keycloak-js';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import styles from "./page.module.css";
+
 
 const keycloakOptions = {
   url: "http://localhost:8080",
@@ -59,7 +61,7 @@ const ProtectedPage = () => {
   return (
     <div>
       {isAuthenticated ? (
-        <div>
+        <div className={styles.container}>
           <h1>Protected Page</h1>
           <button onClick={handleLogout}>Logout</button>
         </div>
