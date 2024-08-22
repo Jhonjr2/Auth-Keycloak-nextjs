@@ -1,4 +1,4 @@
-Next.js Keycloak Authentication 
+## Next.js Keycloak Authentication 
 
 
 Este proyecto es una aplicación simple desarrollada con Next.js que implementa autenticación con Keycloak para proteger ciertas rutas de la aplicación. El proyecto demuestra cómo integrar Keycloak en un proyecto de Next.js utilizando Docker para ejecutar el servidor de Keycloak.
